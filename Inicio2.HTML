@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzas Milenium - Bebidas</title>
+    <link rel="stylesheet" href="Inicio2.css">
+</head>
+<body>
+    <header>
+        <img src="logo2.jpg" alt="Pizzas Milenium">
+        <div>
+            <input type="text" placeholder="Buscar...">
+            <button id="cartBtn">🛒</button>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <a href="Inicio.HTML"><button>Pizzas</button></a>
+        <a href="Inicio2.HTML"><button>Bebidas</button></a>
+        <button id="favoriteBtn">❤️</button>
+        <button id="historyBtn">📜</button>
+    </nav>
+
+    <div class="category-titles">
+        <h3>Pizzas</h3>
+        <h3>Bebidas</h3>
+    </div>
+
+    <div class="container">
+        <!-- Bebidas -->
+        <div class="beverage-item">
+            <img src="coca cola.jpg" alt="Coca Cola">
+            <p>Coca Cola</p>
+            <p>Refresco clásico y refrescante</p>
+            <div class="sizes-list">
+                <label for="size-select-coca-cola">Elige el tamaño:</label>
+                <select id="size-select-coca-cola">
+                    <option value="PERSONAL">PERSONAL - Bs. 3</option>
+                    <option value="POPULAR">POPULAR - Bs. 8</option>
+                    <option value="2L">2 LITROS - Bs. 15</option>
+                </select>
+            </div>
+            <button class="verMas" data-title="Coca Cola" data-descripcion="Refresco clásico y refrescante">Ver más</button>
+            <button class="add-to-favorites" data-title="Coca Cola">❤️</button>
+        </div>
+
+        <div class="beverage-item">
+            <img src="sprite.jpg" alt="Sprite">
+            <p>Sprite</p>
+            <p>Refresco con sabor cítrico refrescante</p>
+            <div class="sizes-list">
+                <label for="size-select-sprite">Elige el tamaño:</label>
+                <select id="size-select-sprite">
+                    <option value="PERSONAL">PERSONAL - Bs. 3</option>
+                    <option value="POPULAR">POPULAR - Bs. 8</option>
+                </select>
+            </div>
+            <button class="verMas" data-title="Sprite" data-descripcion="Refresco con sabor cítrico refrescante">Ver más</button>
+            <button class="add-to-favorites" data-title="Sprite">❤️</button>
+        </div>
+
+        <div class="beverage-item">
+            <img src="fanta.png" alt="Fanta">
+            <p>Fanta</p>
+            <p>Refresco refrescante con un toque de naranja</p>
+            <div class="sizes-list">
+                <label for="size-select-fanta">Elige el tamaño:</label>
+                <select id="size-select-fanta">
+                    <option value="PERSONAL">PERSONAL - Bs. 3</option>
+                    <option value="POPULAR">POPULAR - Bs. 8</option>
+                </select>
+            </div>
+            <button class="verMas" data-title="Fanta" data-descripcion="Refresco refrescante con un toque de naranja">Ver más</button>
+            <button class="add-to-favorites" data-title="Fanta">❤️</button>
+        </div>
+
+        <div class="beverage-item">
+            <img src="jugo.png" alt="Jugo Del Valle">
+            <p>Jugo Del Valle</p>
+            <p>Jugo natural de fruta en varios sabores</p>
+            <div class="sizes-list">
+                <label for="size-select-jugo">Elige el tamaño:</label>
+                <select id="size-select-jugo">
+                    <option value="PERSONAL">PERSONAL - Bs. 15</option>
+                </select>
+            </div>
+            <button class="verMas" data-title="Jugo Del Valle" data-descripcion="Jugo natural de fruta en varios sabores">Ver más</button>
+            <button class="add-to-favorites" data-title="Jugo Del Valle">❤️</button>
+        </div>
+    </div>
+
+    <!-- Modal de Bebidas -->
+    <div id="beverageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <button id="add-to-cart" class="add-to-cart-btn">Añadir al carrito</button>
+        </div>
+    </div>
+
+    <script src="Inicio2.js"></script>
+</body>
+</html>

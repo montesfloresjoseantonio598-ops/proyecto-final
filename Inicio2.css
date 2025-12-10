@@ -1,0 +1,284 @@
+/* Reset global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo y estilo general */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+    height: 100vh;
+}
+
+/* Imagen de fondo */
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Estilo para el header (barra de navegación) */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header img {
+    width: 100px;
+    height: auto;
+}
+
+header input[type="text"] {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+}
+
+header button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+header button:hover {
+    background-color: #d32f2f;
+}
+
+/* Navbar (iconos de favoritos y historial) */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.navbar button {
+    padding: 10px 15px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Título de la categoría */
+.category-titles {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.category-titles h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el contenedor de las bebidas y pizzas */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 80px; /* Para que no se solapen con el header */
+}
+
+/* Estilo de cada bebida y pizza */
+.pizza-item, .beverage-item {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.pizza-item img, .beverage-item img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.pizza-item p, .beverage-item p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Botones de las bebidas y pizzas */
+.pizza-item button, .beverage-item button {
+    background-color: #008CBA;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pizza-item button:hover, .beverage-item button:hover {
+    background-color: #0077A3;
+}
+
+/* Hover para las bebidas y pizzas */
+.pizza-item:hover, .beverage-item:hover {
+    transform: scale(1.05);
+}
+
+/* Modal de Bebidas */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px black;
+    text-align: left;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.close {
+    float: right;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Estilo para los selectores */
+.sizes-list select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+}
+
+.add-to-cart-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #45a049;
+}
+
+/* Estilo para dispositivos pequeños */
+@media (max-width: 768px) {
+    header input[type="text"] {
+        width: 200px;
+    }
+
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pizza-item, .beverage-item {
+        padding: 20px;
+    }
+
+    header img {
+        width: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    header input[type="text"] {
+        width: 180px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    header img {
+        width: 80px;
+    }
+
+    .pizza-item, .beverage-item {
+        padding: 20px;
+    }
+
+    .pizza-item button, .beverage-item button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+/* Fondo de pantalla */
+.background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;  /* Esto asegura que el fondo quede detrás de todos los elementos */
+}

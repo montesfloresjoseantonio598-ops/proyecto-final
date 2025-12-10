@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzas Milenium - Inscribirse</title>
+    <link rel="stylesheet" href="Inscribirse.css">
+</head>
+<body>
+    <div class="container">
+        <img src="pizza.jpg" alt="Pizza con pepperoni" class="pizza-image">
+        <img src="Logo.png" alt="Pizzas Milenium" class="logo">
+        
+        <div class="form-container">
+            <div class="form-box">
+                <div class="buttons">
+                    <button class="toggle-button" id="login-button" onclick="window.location.href='Acceso.html'">Acceso</button>
+                    <button class="toggle-button active" id="signup-button">Inscribirse</button>
+                </div>
+                <h2>Bienvenido</h2>
+                <form id="signup-form">
+                    <label for="email">E-mail</label><br>
+                    <input type="email" id="email-signup" name="email-signup" required><br><br>
+
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password-signup" name="password-signup" required><br><br>
+
+                    <button type="submit" class="register-button">Registrarse</button><br><br>
+
+                    <a href="#">¿Ya tienes cuenta? Inicia sesión</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="Inscribirse.js"></script>
+</body>
+</html>
